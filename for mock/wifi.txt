@@ -1,0 +1,359 @@
+
+DD-WRT v24-sp2 std (c) 2010 NewMedia-NET GmbH
+Release: 11/21/10 (SVN revision: 15778)
+
+u_babyli login: root
+Password:
+==========================================================
+
+ ____  ___    __        ______ _____         ____  _  _
+ | _ \| _ \   \ \      / /  _ \_   _| __   _|___ \| || |
+ || | || ||____\ \ /\ / /| |_) || |   \ \ / / __) | || |_
+ ||_| ||_||_____\ V  V / |  _ < | |    \ V / / __/|__   _|
+ |___/|___/      \_/\_/  |_| \_\|_|     \_/ |_____|  |_|
+
+                       DD-WRT v24-sp2
+                   http://www.dd-wrt.com
+
+==========================================================
+
+
+BusyBox v1.13.4 (2010-11-21 11:52:50 CET) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+root@u_babyli:~# iwlist ath0
+iwlist: unknown command `ath0' (check 'iwlist --help').
+root@u_babyli:~# iwlist ath0 rssi
+iwlist: unknown command `rssi' (check 'iwlist --help').
+root@u_babyli:~# iwlist
+Usage: iwlist [interface] scanning [essid NNN] [last]
+              [interface] frequency
+              [interface] channel
+              [interface] bitrate
+              [interface] rate
+              [interface] encryption
+              [interface] keys
+              [interface] power
+              [interface] txpower
+              [interface] retry
+              [interface] ap
+              [interface] accesspoints
+              [interface] peers
+              [interface] event
+              [interface] auth
+              [interface] wpakeys
+              [interface] genie
+              [interface] modulation
+root@u_babyli:~# iconfig ath0
+-sh: iconfig: not found
+root@u_babyli:~# iwconfig ath0
+ath0      IEEE 802.11ng  ESSID:"u_babyli"
+          Mode:Master  Frequency:2.472 GHz  Access Point: 64:70:02:64:B2:D0
+          Bit Rate:1 Mb/s   Tx-Power=20 dBm   Sensitivity=0/3
+          Retry:off   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:off
+          Link Quality=14/94  Signal level=0 dBm  Noise level=-120 dBm
+          Rx invalid nwid:31  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+root@u_babyli:~# iwlist ath0 scan
+ath0      Scan completed :
+          Cell 01 - Address: 84:C9:B2:51:0F:B7
+                    ESSID:"Oleg_WiFi"
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101820003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 02 - Address: 90:F6:52:77:5A:B4
+                    ESSID:"FREGAT_LINK"
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Quality=8/94  Signal level=-87 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101030003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 03 - Address: 00:15:6D:80:66:CD
+                    ESSID:"frg_net"
+                    Mode:Master
+                    Frequency:2.422 GHz (Channel 3)
+                    Quality=28/94  Signal level=-67 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (1) : TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:mtik_ie=dd26000c42000000011e0000000000660203ff0f55424e                                                                                                       5400000000000000000000000000000000
+          Cell 04 - Address: 64:70:02:3F:80:B8
+                    ESSID:"Lina"
+                    Mode:Master
+                    Frequency:2.432 GHz (Channel 5)
+                    Quality=6/94  Signal level=-89 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101830003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 05 - Address: 00:18:E7:EC:D5:AF
+                    ESSID:"D-Link615"
+                    Mode:Master
+                    Frequency:2.432 GHz (Channel 5)
+                    Quality=6/94  Signal level=-89 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    Extra:wme_ie=dd180050f2020101820003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 06 - Address: 64:70:02:AB:0C:8E
+                    ESSID:"TP-LINK_AB0C8E"
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Quality=6/94  Signal level=-89 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101830003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 07 - Address: B0:48:7A:DF:27:3E
+                    ESSID:"Perkov Viktor"
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Quality=11/94  Signal level=-84 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    Extra:wme_ie=dd180050f2020101010003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 08 - Address: F4:EC:38:D1:9A:C6
+                    ESSID:"Wi-Fi"
+                    Mode:Master
+                    Frequency:2.452 GHz (Channel 9)
+                    Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101860003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 09 - Address: 00:15:6D:5A:D2:2C
+                    ESSID:"solt"
+                    Mode:Master
+                    Frequency:2.452 GHz (Channel 9)
+                    Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+                    Encryption key:off
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    Extra:wme_ie=dd180050f2020101820003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+                    Extra:mtik_ie=dd26000c42000000011e040000001f660902ff0f55424e                                                                                                       5400000000000000000000000000000000
+          Cell 10 - Address: 90:F6:52:3C:98:5C
+                    ESSID:"Inga"
+                    Mode:Master
+                    Frequency:2.427 GHz (Channel 4)
+                    Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101860003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 11 - Address: 14:DA:E9:83:04:BC
+                    ESSID:"ASUS"
+                    Mode:Master
+                    Frequency:2.432 GHz (Channel 5)
+                    Quality=8/94  Signal level=-87 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101000003a4000027a4000042435e00623                                                                                                       22f00
+          Cell 12 - Address: 90:F6:52:A6:54:94
+                    ESSID:"TP-LINK16"
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Quality=11/94  Signal level=-84 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101830003a4000027a4000042435e00623                                                                                                       22f00
+                    Extra:ath_ie=dd0900037f01010000ff7f
+          Cell 13 - Address: 00:24:01:BC:2D:4F
+                    ESSID:"SERG"
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Quality=5/94  Signal level=-90 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : CCMP TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:ath_ie=dd0900037f01010060ff7f
+          Cell 14 - Address: FC:75:16:42:4A:E6
+                    ESSID:"home73"
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Quality=16/94  Signal level=-79 dBm  Noise level=-95 dBm
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 9 Mb/s
+                              18 Mb/s; 36 Mb/s; 54 Mb/s; 6 Mb/s; 12 Mb/s
+                              24 Mb/s; 48 Mb/s
+                    Extra:bcn_int=100
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (1) : TKIP
+                        Authentication Suites (1) : PSK
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (1) : TKIP
+                        Authentication Suites (1) : PSK
+                    Extra:wme_ie=dd180050f2020101034003a4000027a4000042435e00623                                                                                                       22f00
+
+root@u_babyli:~# iwlist
+Usage: iwlist [interface] scanning [essid NNN] [last]
+              [interface] frequency
+              [interface] channel
+              [interface] bitrate
+              [interface] rate
+              [interface] encryption
+              [interface] keys
+              [interface] power
+              [interface] txpower
+              [interface] retry
+              [interface] ap
+              [interface] accesspoints
+              [interface] peers
+              [interface] event
+              [interface] auth
+              [interface] wpakeys
+              [interface] genie
+              [interface] modulation
+root@u_babyli:~# iwlist
+Usage: iwlist [interface] scanning [essid NNN] [last]
+              [interface] frequency
+              [interface] channel
+              [interface] bitrate
+              [interface] rate
+              [interface] encryption
+              [interface] keys
+              [interface] power
+              [interface] txpower
+              [interface] retry
+              [interface] ap
+              [interface] accesspoints
+              [interface] peers
+              [interface] event
+              [interface] auth
+              [interface] wpakeys
+              [interface] genie
+              [interface] modulation
+root@u_babyli:~# iwlist ath0 power
+ath0      Current mode:off
+
+root@u_babyli:~# iwlist ath0 peers
+ath0      Peers/Access-Points in range:
+    84:C9:B2:51:0F:B7 : Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+    90:F6:52:77:5A:B4 : Quality=8/94  Signal level=-87 dBm  Noise level=-95 dBm
+    00:15:6D:80:66:CD : Quality=28/94  Signal level=-67 dBm  Noise level=-95 dBm
+    90:F6:52:3C:98:5C : Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+    64:70:02:3F:80:B8 : Quality=6/94  Signal level=-89 dBm  Noise level=-95 dBm
+    00:18:E7:EC:D5:AF : Quality=6/94  Signal level=-89 dBm  Noise level=-95 dBm
+    14:DA:E9:83:04:BC : Quality=8/94  Signal level=-87 dBm  Noise level=-95 dBm
+    90:F6:52:A6:54:94 : Quality=11/94  Signal level=-84 dBm  Noise level=-95 dBm
+    64:70:02:AB:0C:8E : Quality=6/94  Signal level=-89 dBm  Noise level=-95 dBm
+    B0:48:7A:DF:27:3E : Quality=11/94  Signal level=-84 dBm  Noise level=-95 dBm
+    00:24:01:BC:2D:4F : Quality=5/94  Signal level=-90 dBm  Noise level=-95 dBm
+    F4:EC:38:D1:9A:C6 : Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+    00:15:6D:5A:D2:2C : Quality=10/94  Signal level=-85 dBm  Noise level=-95 dBm
+    FC:75:16:42:4A:E6 : Quality=16/94  Signal level=-79 dBm  Noise level=-95 dBm
+
+root@u_babyli:~# iwlist ath0 genie
+ath0      no generic IE (Invalid argument).
+
+root@u_babyli:~# iwlist ath0 event
+ath0      Wireless Events supported :
+          0x8B04 : Set Frequency/Channel (kernel generated)
+          0x8B06 : Set Mode (kernel generated)
+          0x8B1A : Set ESSID (kernel generated)
+          0x8B2A : Set Encoding (kernel generated)
+          0x8C02 : Custom driver event
+
+root@u_babyli:~#
